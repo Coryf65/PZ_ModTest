@@ -1,0 +1,2 @@
+module COR = modid
+
