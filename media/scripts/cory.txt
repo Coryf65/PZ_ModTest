@@ -18,7 +18,7 @@ module COR
             CustomContextMenu   = Drink,
             CustomEatSound      = soda_open,
             Carbohydrates       = 39,
-            ReplaceOnUse        = PopEmpty,
+            ReplaceOnUse        = sodacan_empty,
             Proteins            = 0,
             Lipids              = 0,
             Calories            = 180,
@@ -33,7 +33,7 @@ module COR
             Type	        = Normal,
             DisplayName	    = Empty Soda Can,
             ReplaceOnUseOn	= WaterSource-WaterSodaBottle,
-            Icon	        = Soda_empty,
+            Icon	        = sodacan_empty,
             MetalValue      = 5,
         }
 }
