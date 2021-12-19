@@ -19,3 +19,4 @@ end
 
 Events.OnGameBoot.Add(info);
 Events.OnGameStart.Add(giveItems);
+Events.OnGameStart.Add(print("Test!"));

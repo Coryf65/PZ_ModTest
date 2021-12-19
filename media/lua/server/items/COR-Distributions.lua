@@ -2846,7 +2846,7 @@ local distributionTable = {
         },
         -- only two map allowed
         maxMap = 2,
-        -- this mean 90% chance on normal sandbox settings to have an annoted map
+        -- 10 means 90% chance on normal sandbox settings to have an annoted map
         stashChance = 10,
         fillRand = 0,
     },
@@ -2914,13 +2914,6 @@ local distributionTable = {
         }
     },
 
-    Plasticbag = {
-        rolls = 0,
-        items = {
-
-        }
-    },
-
 
     -- =====================
     --    Caches
@@ -2932,15 +2925,13 @@ local distributionTable = {
             procList = {
                 {name="KitchenCannedFood", min=1, max=7, weightChance=100},
                 {name="KitchenDryFood", min=1, max=2, weightChance=100},
-                {name="MeleeWeapons", min=1, max=2, weightChance=100},
-                {name="FirearmWeapons", min=1, max=1, weightChance=100},
             },
         },
 
         SurvivorCrate = {
             rolls = 4,
             items = {
-                "COR.Soda", 10,
+                "COR.Soda", 0,
             }
         },
     },
@@ -2951,15 +2942,13 @@ local distributionTable = {
             procList = {
                 {name="KitchenCannedFood", min=1, max=7, weightChance=100},
                 {name="KitchenDryFood", min=1, max=2, weightChance=100},
-                {name="MeleeWeapons", min=1, max=2, weightChance=100},
-                {name="FirearmWeapons", min=1, max=1, weightChance=100},
             },
         },
 
         SurvivorCrate = {
             rolls = 4,
             items = {
-                "COR.Soda", 10,
+                "COR.Soda", 0,
             }
         },
     },
