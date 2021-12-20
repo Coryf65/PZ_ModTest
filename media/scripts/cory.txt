@@ -18,7 +18,7 @@ module COR
             CustomContextMenu   = Drink,
             CustomEatSound      = soda_open,
             Carbohydrates       = 39,
-            ReplaceOnUse        = sodacan_empty,
+            ReplaceOnUse        = SodaCan_Empty,
             Proteins            = 0,
             Lipids              = 0,
             Calories            = 180,
@@ -26,7 +26,7 @@ module COR
             CantBeFrozen        = TRUE,
         }
 
-    item SodaCanEmpty
+    item SodaCan_Empty
         {
             Weight	        = 0.1,
             CanStoreWater	= TRUE,
