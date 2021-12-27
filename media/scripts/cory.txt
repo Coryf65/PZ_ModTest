@@ -6,39 +6,51 @@ module COR
     }
 
     item Soda
-        {
-            DisplayCategory     = Food,
-            HungerChange	    = -20,
-            Weight	            = 0.3,
-            AlwaysWelcomeGift	= TRUE,
-            Type	            = Food,
-            UnhappyChange	    = -20,
-            ThirstChange	    = -20,
-            DisplayName	        = Fizzy Soda Can,
-            ReplaceOnUse	    = SodaCan_Empty,
-            Alcoholic	        = TRUE,
-            Icon	            = sodacan,
-            CustomContextMenu   = Drink,
-            CustomEatSound      = soda_open,
-            Carbohydrates       = 50,
-            Proteins            = 0,
-            Lipids              = 0,
-            Calories            = 200,
-            Packaged            = TRUE,
-            CantBeFrozen        = TRUE,
-            StaticModel         = sodacan,
-            EatType             = popcan,
-            WorldStaticModel    = BeerCan_Ground,
-        }
+	{
+		HungerChange		= -8,
+		Weight			    = 0.3,
+		AlwaysWelcomeGift	= TRUE,
+		Type			    = Food,
+		ThirstChange		= -50,
+		EnduranceChange		= 15,
+        FatigueChange		= -15,
+		DisplayName		    = Energy Drink,
+		Icon			    = sodacan,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= soda_open,
+		Packaged            = TRUE,
+        Carbohydrates       = 69,
+        Proteins            = 0,
+        Lipids              = 0,
+        Calories            = 69,
+        	StaticModel     = item_soda_can,
+            WorldStaticModel= item_soda_can,
+	}
 
     item SodaCan_Empty
-        {
-            Weight	        = 0.1,
-            CanStoreWater	= TRUE,
-            Type	        = Normal,
-            DisplayName	    = Empty Fizzy Soda Can,
-            ReplaceOnUseOn	= WaterSource-WaterSodaBottle,
-            Icon	        = sodacan_empty,
-            MetalValue      = 5,
-        }
+    {
+        Weight	        = 0.1,
+        CanStoreWater	= TRUE,
+        Type	        = Normal,
+        DisplayName	    = Empty Fizzy Soda Can,
+        ReplaceOnUseOn	= WaterSource-SodaWater,
+        Icon	        = sodacan_empty,
+        MetalValue      = 5,
+    }
+
+    item SodaWater
+	{
+		IsWaterSource		=	TRUE,
+		Weight			    =	0.8,
+		CanStoreWater		=	TRUE,
+		Type			    =	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta		    =	0.1,
+		DisplayName		    =	Fizzy Soda Can of Water,
+		ReplaceOnDeplete	=	SodaCan_Empty,
+		ReplaceOnUseOn		=	WaterSource-item_soda_can,
+		Icon			    =	item_soda_can,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+	}
 }

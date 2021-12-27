@@ -8,16 +8,13 @@ local debugItems = TRUE;
 Soda = {}
 
 Soda.onLoad = function()
-    print("Chainsaw.onLoad")
+    print("Soda.onLoad")
     local player = getPlayer()
     Soda.initInvItems(player)
 end
 
 Soda.initInvItems = function(player)
-    local equippedChainsaw
-    local chainsaws
-    local petrolCans
-  
+
     if player then
       print("Soda.initInvItems: player is loaded")
     else
@@ -37,5 +34,3 @@ local function giveItems()
         player:getInventory():AddItem("COR.Soda");
     end
 end
-
-Events.OnKeyPressed.Add(Chainsaw.addChainsaw)
