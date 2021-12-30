@@ -7,6 +7,9 @@
 
 module coryf65 = modid
 
+Path to mod 
+> "C:\Users\Cory\Zomboid\mods"
+
 
 # API Docs
 

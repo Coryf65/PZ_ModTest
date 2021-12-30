@@ -2,6 +2,10 @@
     "Lua.diagnostics.globals": [
         "getPlayer",
         "getSpecificPlayer",
-        "TRUE"
+        "TRUE",
+        "ProceduralDistributions",
+        "SuburbsDistributions",
+        "Events",
+        "OnKeyKeepPressed"
     ]
 }
