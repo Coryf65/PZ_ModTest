@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.globals": [
+        "getPlayer",
+        "getSpecificPlayer",
+        "TRUE"
+    ]
+}
