@@ -5,32 +5,57 @@ local MOD_AUTHOR = "Cory Fabian";
 local MOD_DESCRIPTION = "Adds a Fizzy Soda to the game for a test mod.";
 local debugItems = TRUE;
 
-Soda = {}
+-- Soda = {}
 
-Soda.onLoad = function()
-    print("Soda.onLoad")
-    local player = getPlayer()
-    Soda.initInvItems(player)
+-- Soda.onLoad = function()
+--     print("Soda.onLoad")
+--     local player = getPlayer()
+--     Soda.initInvItems(player)
+-- end
+
+-- Soda.initInvItems = function(player)
+
+--     if player then
+--       print("Soda.initInvItems: player is loaded")
+--     else
+--       print("Soda.initInvItems: player is null")
+--       return
+--     end
+-- end
+
+-- local function info()
+--     print("Mod loaded. " .. MOD_NAME .. " by: " .. MOD_AUTHOR .. "(v ".. MOD_VERSION .. ")");
+-- end
+
+-- -- comment
+-- local function giveItems()
+--     if debugItems then
+--         local player = getSpecificPlayer(0);
+--         player:getInventory():AddItem("COR.Soda");
+--         player:getInventory():AddItem("COR.SodaCan_Empty");
+--         player:getInventory():AddItem("COR.SodaWater");
+--     end
+-- end
+
+
+-- lua function
+-- function doStuffInLua(_player)
+--     -- getSpecificPlayer() is a public method defined in the java source code        
+--     -- that returns the player. We can access it through lua.        
+--     getSpecificPlayer(_player); 
+-- end
+
+
+-- the function we want to execute
+function sayStuff()	
+    -- Java: we get the first player	
+    local player = getSpecificPlayer(0);	
+    
+    -- Java: let the player speak	
+    player:Say("I like turtles.");
 end
 
-Soda.initInvItems = function(player)
-
-    if player then
-      print("Soda.initInvItems: player is loaded")
-    else
-      print("Soda.initInvItems: player is null")
-      return
-    end
-end
-
-local function info()
-    print("Mod loaded. " .. MOD_NAME .. " by: " .. MOD_AUTHOR .. "(v ".. MOD_VERSION .. ")");
-end
-
--- comment
-local function giveItems()
-    if debugItems then
-        local player = getSpecificPlayer(0);
-        player:getInventory():AddItem("COR.Soda");
-    end
-end
+-- this event will be fired every ten ingame minutes.
+-- In this case sayStuff() is the associated method and
+-- thus will be executed every ten minutes. 
+Events.EveryTenMinutes.Add(sayStuff);

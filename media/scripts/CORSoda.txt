@@ -7,13 +7,13 @@ module COR
 
     item Soda
 	{
-		HungerChange		= -8,
+		HungerChange		= -69,
 		Weight			    = 0.3,
 		AlwaysWelcomeGift	= TRUE,
 		Type			    = Food,
-		ThirstChange		= -50,
-		EnduranceChange		= 15,
-        FatigueChange		= -15,
+		ThirstChange		= -69,
+		EnduranceChange		= 69,
+        FatigueChange		= -69,
 		DisplayName		    = Energy Drink,
 		Icon			    = sodacan,
 		CustomContextMenu 	= Drink,
